@@ -1,0 +1,165 @@
+﻿<Window x:Class="SIPSample.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    xmlns:wf ="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    Title="PortSIP Solutions, Inc. http://www.portsip.com   sales@portsip.com" Height="707" Width="1334" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Canvas Height="649" Width="1302">
+
+        <TextBlock Canvas.Left="30" Canvas.Top="-10" Height="28" Name="hyperlink" Width="300">           
+    <Hyperlink NavigateUri="http://www.portsip.com/portsip-pbx" RequestNavigate="Hyperlink_RequestNavigate">
+        Click here to learn about PortSIP PBX/SIP Server
+    </Hyperlink>
+        </TextBlock>
+
+
+        <GroupBox Canvas.Left="12" Canvas.Top="8" Header="SIP" Height="382" Name="groupBox1" Width="450">
+            <Canvas>
+                <Label Canvas.Left="10" Canvas.Top="2" Height="28" Name="label1" Width="87">User Name:</Label>
+                <TextBox Canvas.Left="103" Canvas.Top="4" Height="23" Name="TextBoxUserName" Width="120" AcceptsTab="False" />
+                <Label Canvas.Left="231" Canvas.Top="2" Height="28" Name="label2" Width="72">Password:</Label>
+                <TextBox Canvas.Left="309" Canvas.Top="4" Height="23" Name="TextBoxPassword" Width="120" />
+                <Label Canvas.Left="10" Canvas.Top="28" Height="28" Name="label3" Width="87">Display Name:</Label>
+                <TextBox Canvas.Left="103" Canvas.Top="30" Height="23" Name="TextBoxDisplayName" Width="120" />
+                <Label Canvas.Left="231" Canvas.Top="28" Height="28" Name="label4" Width="72">Auth Name:</Label>
+                <TextBox Canvas.Left="309" Canvas.Top="30" Height="23" Name="TextBoxAuthName" Width="120" />
+                <Label Canvas.Left="10" Canvas.Top="54" Height="28" Name="label5" Width="87">User Domain:</Label>
+                <TextBox Canvas.Left="103" Canvas.Top="56" Height="23" Name="TextBoxUserDomain" Width="120" />
+                <Label Canvas.Left="10" Canvas.Top="80" Height="28" Name="label6" Width="87">SIP Server:</Label>
+                <TextBox Canvas.Left="103" Canvas.Top="82" Height="23" Name="TextBoxServer" Width="120" />
+                <Label Canvas.Left="231" Canvas.Top="80" Height="28" Name="label7" Width="72">Server Port:</Label>
+                <TextBox Canvas.Left="309" Canvas.Top="82" Height="23" Name="TextBoxServerPort" Width="120" />
+                <Label Canvas.Left="10" Canvas.Top="106" Height="28" Name="label8" Width="87">Stun Server:</Label>
+                <TextBox Canvas.Left="103" Canvas.Top="108" Height="23" Name="TextBoxStunServer" Width="120" />
+                <Label Canvas.Left="231" Canvas.Top="106" Height="28" Name="label9" Width="72">Port:</Label>
+                <TextBox Canvas.Left="309" Canvas.Top="108" Height="23" Name="TextBoxStunPort" Width="120" />
+                <Label Canvas.Left="8" Canvas.Top="140" Height="27" Name="label10" Width="69">Transport:</Label>
+                <ComboBox Canvas.Left="83" Canvas.Top="140" Height="22" Name="ComboBoxTransport" Width="65" />
+                <Label Canvas.Left="154" Canvas.Top="140" Height="27" Name="label11" Width="42">SRTP:</Label>
+                <ComboBox Canvas.Left="194" Canvas.Top="140" Height="22" Name="ComboBoxSRTP" Width="64" SelectionChanged="ComboBoxSRTP_SelectionChanged" />
+                <Button Canvas.Left="273" Canvas.Top="163" Height="22" Name="button1" Width="75" Click="button1_Click">Online</Button>
+                <Button Canvas.Left="354" Canvas.Top="163" Height="23" Name="button2" Width="75" Click="button2_Click">Offline</Button>
+                <TextBox Canvas.Left="16" Canvas.Top="196" Height="23" Name="TextBoxPhoneNumber" Width="203" />
+                <Button Canvas.Left="16" Canvas.Top="224" Height="20" Name="button3" Width="58" Click="button3_Click">1</Button>
+                <Button Canvas.Left="88" Canvas.Top="224" Height="20" Name="button4" Width="58" Click="button4_Click">2</Button>
+                <Button Canvas.Left="161" Canvas.Top="224" Height="20" Name="button5" Width="58" Click="button5_Click">3</Button>
+                <Button Canvas.Left="16" Canvas.Top="248" Height="20" Name="button6" Width="58" Click="button6_Click">4</Button>
+                <Button Canvas.Left="88" Canvas.Top="248" Height="20" Name="button7" Width="58" Click="button7_Click">5</Button>
+                <Button Canvas.Left="161" Canvas.Top="248" Height="20" Name="button8" Width="58" Click="button8_Click">6</Button>
+                <Button Canvas.Left="16" Canvas.Top="272" Height="20" Name="button9" Width="58" Click="button9_Click">7</Button>
+                <Button Canvas.Left="88" Canvas.Top="272" Height="20" Name="button10" Width="58" Click="button10_Click">8</Button>
+                <Button Canvas.Left="161" Canvas.Top="272" Height="20" Name="button11" Width="58" Click="button11_Click">9</Button>
+                <Button Canvas.Left="16" Canvas.Top="296" Height="20" Name="button12" Width="58" Click="button12_Click">*</Button>
+                <Button Canvas.Left="88" Canvas.Top="296" Height="20" Name="button13" Width="58" Click="button13_Click">0</Button>
+                <Button Canvas.Left="161" Canvas.Top="296" Height="20" Name="button14" Width="58" Click="button14_Click">#</Button>
+                <ComboBox Canvas.Left="16" Canvas.Top="320" Height="23" Name="ComboBoxLines" Width="203" SelectionChanged="ComboBoxLines_SelectionChanged" />
+                <Button Canvas.Left="233" Canvas.Top="277" Height="23" Name="ButtonDial" Width="60" Click="ButtonDial_Click">Dial</Button>
+                <Button Canvas.Left="233" Canvas.Top="305" Height="23" Name="ButtonReject" Width="60" Click="ButtonReject_Click">Reject</Button>
+                <Button Canvas.Left="299" Canvas.Top="277" Height="23" Name="ButtonHangUp" Width="60" Click="ButtonHangUp_Click">Hang Up</Button>
+                <Button Canvas.Left="299" Canvas.Top="305" Height="23" Name="ButtonHold" Width="60" Click="ButtonHold_Click">Hold</Button>
+                <Button Canvas.Left="365" Canvas.Top="305" Height="23" Name="button20" Width="60" Click="button20_Click">UnHold</Button>
+                <Button Canvas.Left="233" Canvas.Top="331" Height="23" Name="ButtonTransfer" Width="60" Click="ButtonTransfer_Click">Transfer</Button>
+                <Button Canvas.Left="299" Canvas.Top="331" Height="23" Name="button22" Width="126" Click="button22_Click">Attended Transfer</Button>
+                <Button Canvas.Left="365" Canvas.Top="277" Height="23" Name="ButtonAnswer" Width="60" Click="ButtonAnswer_Click">Answer</Button>
+                <CheckBox Canvas.Left="273" Canvas.Top="139" Height="16" Name="checkBoxNeedRegisterServer" Width="120" IsChecked="True">Register to server</CheckBox>
+                <CheckBox Canvas.Left="239" Canvas.Top="192" Height="16" Name="CheckBoxSDP" Width="193">Make call without SDP(3PCC)</CheckBox>
+                <CheckBox Canvas.Left="239" Canvas.Top="211" Height="16" Name="CheckBoxDND" Width="50" Checked="CheckBoxDND_Checked">DND</CheckBox>
+                <CheckBox Canvas.Left="239" Canvas.Top="230" Height="16" Name="CheckBoxAA" Width="97">Auto Answer</CheckBox>
+                <CheckBox Canvas.Left="333" Canvas.Top="211" Height="16" Name="CheckBoxConf" Width="80" Checked="CheckBoxConf_Checked">Conference</CheckBox>
+                <CheckBox Canvas.Left="333" Canvas.Top="230" Height="20" Name="checkBoxPRACK" Width="61" Checked="checkBoxPRACK_Checked">PRACK</CheckBox>
+                <CheckBox Canvas.Left="239" Canvas.Top="250" Height="16" Name="checkBoxMakeVideoCall" Width="100">Make video call</CheckBox>
+                <CheckBox Canvas.Left="345" Canvas.Top="250" Height="16" Name="checkBoxAnswerVideoCall" Width="90">Answer video</CheckBox>
+            </Canvas>
+        </GroupBox>
+        <ListBox Canvas.Left="468" Canvas.Top="15" Height="312" Name="ListBoxSIPLog" Width="407" />
+        <Button Canvas.Left="468" Canvas.Top="333" Height="23" Name="button29" Width="75" Click="button29_Click">Clear</Button>
+        <Label Canvas.Left="898" Canvas.Top="200" Height="28" Name="label21" Width="120">Audio codec</Label>
+        <CheckBox Canvas.Left="931" Canvas.Top="226" Height="16" Name="checkBoxPCMU" Width="80" Checked="checkBoxPCMU_Checked" IsChecked="True">G.711 uLaw</CheckBox>
+        <CheckBox Canvas.Left="1017" Canvas.Top="226" Height="16" Name="checkBoxPCMA" Width="80" Checked="checkBoxPCMA_Checked" IsChecked="True">G.711 aLaw</CheckBox>
+        <CheckBox Canvas.Left="1108" Canvas.Top="226" Height="16" Name="checkBoxG729" Width="80" IsChecked="True" Checked="checkBoxG729_Checked">G.729</CheckBox>
+        <CheckBox Canvas.Left="1209" Canvas.Top="226" Height="16" Name="checkBoxILBC" Width="80" Checked="checkBoxILBC_Checked">iLBC</CheckBox>
+        <CheckBox Canvas.Left="931" Canvas.Top="250" Height="16" Name="checkBoxGSM" Width="80" Checked="checkBoxGSM_Checked">GSM</CheckBox>
+        <CheckBox Canvas.Left="1017" Canvas.Top="250" Height="16" Name="checkBoxAMR" Width="80" IsEnabled="True" Checked="checkBoxAMR_Checked">AMR</CheckBox>
+        <CheckBox Canvas.Left="1108" Canvas.Top="250" Height="16" Name="CheckBoxG722" Width="80" Checked="CheckBoxG722_Checked">G.722</CheckBox>
+        <CheckBox Canvas.Left="1209" Canvas.Top="250" Height="16" Name="CheckBoxSpeex" Width="80" Checked="CheckBoxSpeex_Checked">SPEEX</CheckBox>
+        <CheckBox Canvas.Left="931" Canvas.Top="270" Height="16" Name="CheckBoxAMRwb" Width="80" Checked="CheckBoxAMRwb_Checked" IsEnabled="True">AMR-WB</CheckBox>
+        <CheckBox Canvas.Left="1108" Canvas.Top="270" Height="16" Name="CheckBoxSpeexWB" Width="80" Checked="CheckBoxSpeexWB_Checked">SPEEX-WB</CheckBox>
+        <CheckBox Canvas.Left="1017" Canvas.Top="270" Height="16" Name="CheckBoxG7221" Width="65" IsChecked="False" Checked="CheckBoxG7221_Checked" IsEnabled="True">G.722.1</CheckBox>
+        <Label Canvas.Left="902" Canvas.Top="292" Height="28" Name="label22" Width="120">Video codec</Label>
+        <CheckBox Canvas.Left="934" Canvas.Top="318" Height="16" Name="checkBoxH263" Width="80" Checked="checkBoxH263_Checked">H.263</CheckBox>
+        <CheckBox Canvas.Left="1017" Canvas.Top="318" Height="16" Name="checkBoxH2631998" Width="80" Checked="checkBoxH2631998_Checked">H.263-1998</CheckBox>
+        <CheckBox Canvas.Left="1108" Canvas.Top="318" Height="16" Name="checkBoxH264" Width="80" IsChecked="True" Checked="checkBoxH264_Checked">H.264</CheckBox>
+        <Label Canvas.Left="904" Canvas.Top="340" Height="28" Name="label23" Width="120">Sound effect</Label>
+        <CheckBox Canvas.Left="931" Canvas.Top="365" Height="16" Name="checkBoxAEC" Width="62" Checked="checkBoxAEC_Checked" IsChecked="True">AEC</CheckBox>
+        <CheckBox Canvas.Left="993" Canvas.Top="365" Height="16" Name="checkBoxVAD" Width="80" Checked="checkBoxVAD_Checked">VAD</CheckBox>
+        <CheckBox Canvas.Left="1062" Canvas.Top="365" Height="16" Name="checkBoxCNG" Width="80" Checked="checkBoxCNG_Checked">CNG</CheckBox>
+        <CheckBox Canvas.Left="1127" Canvas.Top="365" Height="16" Name="checkBoxAGC" Width="61" Checked="checkBoxAGC_Checked">AGC</CheckBox>
+        <GroupBox Canvas.Left="475" Canvas.Top="361.96" Header="Recording" Height="121.04" Name="groupBox4" Width="388">
+            <Canvas>
+                <Label Canvas.Left="9.212" Canvas.Top="4" Height="28" Name="label24" Width="108">Record file folder:</Label>
+                <CheckBox Canvas.Left="217.678" Canvas.Top="10" Height="16" Name="checkBox1" Width="176.322" Checked="checkBox1_Checked">Audio stream callback</CheckBox>
+                <TextBox Canvas.Left="10" Canvas.Top="32" Height="23.331" Name="TextBoxRecordFilePath" Width="355" IsEnabled="True">c:\</TextBox>
+                <Label Canvas.Left="10" Canvas.Top="61" Height="27.775" Name="label25" Width="107.212">Record file name:</Label>
+                <TextBox Canvas.Left="137" Canvas.Top="63" Height="23.331" Name="TextBoxRecordFileName" Width="104" />
+                <Button Canvas.Left="254" Canvas.Top="62" Height="23" Name="button31" Width="53" Click="button31_Click">Start</Button>
+                <Button Canvas.Left="313" Canvas.Top="61" Height="23" Name="button32" Width="52" Click="button32_Click">Stop</Button>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Canvas.Left="478" Canvas.Top="489" Height="117" Name="groupBox5" Width="385" Header="Play wave file to remote">
+            <Canvas>
+                <Label Canvas.Left="3.859" Canvas.Top="0" Height="27.775" Name="label27" Width="63.141">Select file</Label>
+                <Button Canvas.Left="70.482" Canvas.Top="2" Height="20" Name="button35" Width="60" Click="button35_Click">...</Button>
+                <TextBox Canvas.Left="10.494" Canvas.Top="27.775" Height="23.331" Name="TextBoxPlayFile" Width="351.506" IsEnabled="False" />
+                <Button Canvas.Left="84.299" Canvas.Top="60" Height="23" Name="button36" Width="75.548" Click="button36_Click">Start Play</Button>
+                <Button Canvas.Left="214.678" Canvas.Top="60" Height="23" Name="button37" Width="75.548" Click="button37_Click">Stop Play</Button>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Canvas.Left="905.929" Canvas.Top="397" Header="Call forward" Height="126" Name="groupBox6" Width="371.071">
+            <Canvas>
+                <Label Canvas.Left="4.071" Canvas.Top="6" Height="27.775" Name="label28" Width="99.521">Forward call to:</Label>
+                <TextBox Canvas.Left="6.071" Canvas.Top="33" Height="23.331" Name="textBoxForwardTo" Width="339" />
+                <CheckBox Canvas.Left="3.43" Canvas.Top="58" Height="15.554" Name="checkBoxForwardCallForBusy" Width="176.822">Forward call when on phone</CheckBox>
+                <Button Canvas.Left="99.984" Canvas.Top="77.042" Height="20" Name="button38" Width="75.548" Click="button38_Click">Enable</Button>
+                <Button Canvas.Left="200.523" Canvas.Top="77.042" Height="19.998" Name="button39" Width="75.548" Click="button39_Click">Disable</Button>
+            </Canvas>
+        </GroupBox>
+        <WindowsFormsHost Canvas.Left="23" Canvas.Top="408" Height="144" Name="localVideoWindow" Width="176">
+            <wf:Panel x:Name="localVideoPanel" />
+        </WindowsFormsHost>
+        <WindowsFormsHost Canvas.Left="261" Canvas.Top="408" Height="144" Name="remoteVideoWindow" Width="176">
+            <wf:Panel x:Name="remoteVideoPanel" />
+        </WindowsFormsHost>
+        <Label Canvas.Left="12" Canvas.Top="558" Height="28" Name="label17" Width="72">Resolution:</Label>
+        <ComboBox Canvas.Left="90" Canvas.Top="558" Height="23" Name="ComboBoxVideoResolution" Width="75" SelectionChanged="ComboBoxVideoResolution_SelectionChanged" />
+        <Label Canvas.Left="179" Canvas.Top="558" Height="28" Name="label18" Width="51">Quality:</Label>
+        <Label Canvas.Left="228" Canvas.Top="558" Height="28" Name="label19" Width="49">normal</Label>
+        <Slider Canvas.Left="283" Canvas.Top="563" Height="18" Maximum="2000" Minimum="100" Name="sliderVideoQualityLevel" Value="300" Width="125" ValueChanged="sliderVideoQualityLevel_ValueChanged" TickFrequency="100" />
+        <Label Canvas.Left="406" Canvas.Top="558" Height="28" Name="label20" Width="50">best</Label>
+        <Button Canvas.Left="24" Canvas.Top="587" Height="23" Name="ButtonCameraOptions" Width="75" Click="ButtonCameraOptions_Click">Options</Button>
+        <Button Canvas.Left="120" Canvas.Top="587" Height="23" Name="ButtonLocalVideo" Width="75" Click="ButtonLocalVideo_Click">Local Video</Button>
+        <Button Canvas.Left="261" Canvas.Top="587" Height="23" Name="ButtonSendVideo" Width="75" Click="ButtonSendVideo_Click">Send Video</Button>
+        <Button Canvas.Left="363" Canvas.Top="587" Height="23" Name="button28" Width="75" Click="button28_Click">Stop Video</Button>
+        <CheckBox Canvas.Left="1209" Canvas.Top="318" Height="16" Name="checkBoxVP8" Width="59" Checked="checkBoxVP8_Checked">VP8</CheckBox>
+        <GroupBox Canvas.Left="903" Canvas.Top="13.96" Header="Volume" Height="81" Name="groupBox2" Width="380">
+            <Canvas>
+                <Label Canvas.Left="6" Canvas.Top="3" Height="28" Name="label12" Width="63">Speaker:</Label>
+                <Slider Canvas.Left="63" Canvas.Top="7" Height="18" Maximum="255" Minimum="0" Name="sliderSpeaker" TickFrequency="10" Value="0" ValueChanged="sliderSpeaker_ValueChanged" Width="197" />
+                <Label Canvas.Left="6" Canvas.Top="31" Height="28" Name="label13" Width="63">Mic:</Label>
+                <Slider Canvas.Left="63" Canvas.Top="35" Height="18" Maximum="255" Minimum="0" Name="sliderMicrophone" TickFrequency="10" Value="0" ValueChanged="sliderMicrophone_ValueChanged" Width="195" />
+                <CheckBox Canvas.Left="264" Canvas.Top="37" Checked="CheckBoxMute_Checked" Height="16" Name="CheckBoxMute" Width="75">Mute Mic</CheckBox>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Canvas.Left="904" Canvas.Top="98.96" Height="94.514" Name="groupBox3" Width="379">
+            <Canvas>
+                <Label Canvas.Left="9" Canvas.Top="1" Height="28" Name="label14" Width="68">Speaker:</Label>
+                <ComboBox Canvas.Left="91" Canvas.Top="6" Height="23" Name="ComboBoxSpeakers" SelectionChanged="ComboBoxSpeakers_SelectionChanged" Width="267" />
+                <Label Canvas.Left="6" Canvas.Top="33" Height="28" Name="label15" Width="79">Microphone:</Label>
+                <ComboBox Canvas.Left="91" Canvas.Top="32" Height="23" Name="ComboBoxMicrophones" SelectionChanged="ComboBoxMicrophones_SelectionChanged" Width="267" />
+                <Label Canvas.Left="6" Canvas.Top="59" Height="28" Name="label16" Width="79">Camera:</Label>
+                <ComboBox Canvas.Left="91" Canvas.Top="61" Height="23" Name="ComboBoxCameras" SelectionChanged="ComboBoxCameras_SelectionChanged" Width="267" />
+            </Canvas>
+        </GroupBox>
+        <CheckBox Canvas.Left="1209" Canvas.Top="270" Height="16" Name="checkBoxOpus" Width="74" Checked="checkBoxOpus_Checked">Opus</CheckBox>
+        <CheckBox Canvas.Left="1194" Canvas.Top="365" Height="16" Name="checkBoxANS" Width="89">ANS</CheckBox>
+    </Canvas>
+</Window>

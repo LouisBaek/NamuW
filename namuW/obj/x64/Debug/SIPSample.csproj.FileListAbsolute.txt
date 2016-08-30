@@ -1,0 +1,14 @@
+C:\win\CSharpSample_WPF\bin\x64\SIPSample.exe
+C:\win\CSharpSample_WPF\bin\x64\SIPSample.pdb
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample.csprojResolveAssemblyReference.cache
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\Window1.baml
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\Window2.baml
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\Window1.g.cs
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\Window2.g.cs
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\App.g.cs
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample_MarkupCompile.cache
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample.g.resources
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample.Properties.Resources.resources
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample.csproj.GenerateResource.Cache
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample.exe
+C:\win\CSharpSample_WPF\SIPSample\obj\x64\Debug\SIPSample.pdb
